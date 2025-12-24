@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏥 HealthQueue: Digital Triage & Queue Management
 
-## Getting Started
+**Prioritizing Care, Not Just Position.**
 
-First, run the development server:
+HealthQueue is a modern, smart triage system designed for government hospitals to move beyond the traditional First-In-First-Out (FIFO) model. By leveraging clinical triage standards (ABDM), the system ensures that patients with urgent medical needs are prioritized dynamically, reducing critical wait times and improving healthcare outcomes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Features
+
+- 🩺 **Clinical Triage Engine**: Automatically categorizes patients into priority levels (Emergency, Urgent, Routine) based on symptom severity.
+- 👨‍⚕️ **Doctor Dashboard**: A specialized workspace for healthcare providers to manage the live priority queue, call patients, and view clinical history.
+- 📱 **Real-time Patient Tracking**: Live queue updates accessible via smartphones, significantly reducing overcrowding in waiting halls.
+- 🔒 **Secure & Compliant**: Built with **HL7 FHIR** standards and **AES-256 encryption** to ensure maximum data privacy and interoperability.
+- 📊 **Queue Insights**: Real-time analytics on wait times, patient flow, and triage accuracy.
+
+## 🛠️ Tech Stack
+
+- **Frontend**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **State Management**: React Context API
+- **Typography**: Outfit & Geist Sans
+- **Icons**: Lucide-inspired SVG components
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or higher
+- npm, pnpm, or yarn
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/health-queue.git
+    cd health-queue
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    pnpm install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open the app:**
+    Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📂 Project Structure
+
+```text
+health-queue/
+├── app/                  # Next.js App Router
+│   ├── book/             # Patient appointment booking
+│   ├── context/          # Global state (Queue Management)
+│   ├── doctor/           # Doctor dashboard & workspace
+│   ├── login/            # Authentication
+│   ├── signup/           # User registration
+│   └── queue/            # Live queue visualization
+├── public/               # Static assets
+└── Health care Management system.pdf # Original project requirements
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🎨 Design Philosophy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+HealthQueue uses a **Medical-Grade Aesthetic**:
+- **Clean & Accessible**: High contrast and readable typography.
+- **Glassmorphism**: Subtle translucent layers for a modern, digital health feel.
+- **Priority Signaling**: Intuitive color coding (Red for Emergency, Amber for Severe, Blue for Routine).
+- **Responsive**: Fully optimized for tablets, desktops, and mobile screens.
 
-## Learn More
+## 📄 License
 
-To learn more about Next.js, take a look at the following resources:
+This project is licensed under the MIT License.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+*Developed with ❤️ for better healthcare accessibility.*
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
