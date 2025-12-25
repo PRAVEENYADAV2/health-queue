@@ -7,23 +7,18 @@ This document contains the process flow and use-case diagrams for the **HealthQu
 The process flow illustrates how a patient moves through the system, from initial symptom submission to consultation completion.
 
 ```mermaid
-graph TD
+graph LR
     A[Patient: Submit Symptoms] --> B{Clinical Triage Engine}
     B -- Emergency --> C[Priority 1: Red]
     B -- Severe --> D[Priority 2: Amber]
     B -- Routine --> E[Priority 3: Blue]
     
-    C --> F[Dynamic Queue Update]
-    D --> F
-    E --> F
+    C & D & E --> F[Dynamic Queue Update]
     
     F --> G[Real-time Patient Notifications]
     F --> H[Doctor: View Prioritized Queue]
     
-    H --> I[Doctor: Call Next Patient]
-    I --> J[Patient Consultation]
-    J --> K[Consultation Complete]
-    K --> L[Removed from Queue]
+    H --> I[Doctor: Call Next Patient] --> J[Patient Consultation] --> K[Consultation Complete] --> L[Removed from Queue]
 ```
 
 ---
